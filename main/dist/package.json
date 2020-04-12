@@ -1,0 +1,20 @@
+{
+  "name": "byte-base64",
+  "version": "1.0.0",
+  "description": "base64 utilities for TypeScript and JavaScript",
+  "homepage": "https://github.com/enepomnyaschih/byte-base64",
+  "bugs": {
+    "url": "https://github.com/enepomnyaschih/byte-base64/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Egor Nepomnyaschih",
+    "email": "enepomnyaschih@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/enepomnyaschih/byte-base64.git"
+  },
+  "main": "lib.js",
+  "typings": "lib.d.ts"
+}

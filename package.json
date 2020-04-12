@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "name": "byte-base64-common",
+  "devDependencies": {
+    "@babel/cli": "~7.8.4",
+    "@babel/core": "~7.9.0",
+    "@babel/preset-env": "~7.9.5",
+    "@types/chai": "~4.2.7",
+    "@types/mocha": "~5.2.7",
+    "chai": "~4.2.0",
+    "core-js": "~3.6.4",
+    "mocha": "~6.2.2",
+    "parcel-bundler": "~1.12.4",
+    "source-map-support": "~0.5.16",
+    "ts-node": "~8.5.4",
+    "byte-base64": "file:main/dist",
+    "typescript": "~3.5.3"
+  }
+}
