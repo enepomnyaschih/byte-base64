@@ -56,7 +56,17 @@ describe("base64encode", () => {
 		expect(base64encode("Man Ё𤭢")).equal("TWFuINCB8KStog==");
 	});
 
-	it("should support custom encoding", () => {
+	it("should support custom encoding with native array output", () => {
+		const encoder = {
+			encode: (str: string) => {
+				expect(str).equal("dummy!");
+				return [0xD7, 0xE1, 0xE0, 0x38]; // 110101|11 1110|0001 11|100000 001110|00 0000
+			}
+		};
+		expect(base64encode("dummy!", encoder)).equal("1+HgOA==");
+	});
+
+	it("should support custom encoding with Uint8Array output", () => {
 		const encoder = {
 			encode: (str: string) => {
 				expect(str).equal("dummy!");
