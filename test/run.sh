@@ -1,1 +1,1 @@
-../node_modules/.bin/mocha --require ts-node/register src/*.ts
+../node_modules/.bin/mocha --require ts-node/register src/tests.ts
