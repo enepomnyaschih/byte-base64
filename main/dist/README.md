@@ -16,7 +16,7 @@ All other known solutions and approaches provide only a limited support for thes
 
 byte-base64 is available as [npm package](https://www.npmjs.com/package/byte-base64).
 
-    npm install --save byte-base64
+    npm install byte-base64
 
 Usage:
 
