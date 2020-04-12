@@ -93,4 +93,19 @@ describe("base64ToBytes", () => {
 			0xC4              // 110001|00 0000                = xA==
 		]);
 	});
+
+	it("should throw an exception if not a base64 string", () => {
+		expect(() => base64ToBytes("AA")).throw(Error, "Unable to parse base64 string.");
+		expect(() => base64ToBytes("AA=")).throw(Error, "Unable to parse base64 string.");
+		expect(() => base64ToBytes("A===")).throw(Error, "Unable to parse base64 string.");
+		expect(() => base64ToBytes("====")).throw(Error, "Unable to parse base64 string.");
+		expect(() => base64ToBytes("A-==")).throw(Error, "Unable to parse base64 string.");
+		expect(() => base64ToBytes("AAA-")).throw(Error, "Unable to parse base64 string.");
+		expect(() => base64ToBytes("AAAAAA")).throw(Error, "Unable to parse base64 string.");
+		expect(() => base64ToBytes("AAAAAA=")).throw(Error, "Unable to parse base64 string.");
+		expect(() => base64ToBytes("AAAAA===")).throw(Error, "Unable to parse base64 string.");
+		expect(() => base64ToBytes("AAAA====")).throw(Error, "Unable to parse base64 string.");
+		expect(() => base64ToBytes("AAAAA-==")).throw(Error, "Unable to parse base64 string.");
+		expect(() => base64ToBytes("AAAAAAA-")).throw(Error, "Unable to parse base64 string.");
+	});
 });

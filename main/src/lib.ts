@@ -107,10 +107,14 @@ export function base64ToBytes(str: string) {
 	if (str.length % 4 !== 0) {
 		throw new Error("Unable to parse base64 string.");
 	}
+	const index = str.indexOf("=");
+	if (index !== -1 && index < str.length - 2) {
+		throw new Error("Unable to parse base64 string.");
+	}
 	let missingOctets = str.endsWith("==") ? 2 : str.endsWith("=") ? 1 : 0,
 		n = str.length,
 		result = new Uint8Array(3 * (n / 4)),
-		buffer;
+		buffer: number;
 	for (let i = 0, j = 0; i < n; i += 4, j += 3) {
 		buffer =
 			getBase64Code(str.charCodeAt(i)) << 18 |

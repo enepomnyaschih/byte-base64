@@ -65,4 +65,19 @@ describe("base64decode", () => {
 		};
 		expect(base64decode("1+HgOA==", decoder)).equal("Hello!");
 	});
+
+	it("should throw an exception if not a base64 string", () => {
+		expect(() => base64decode("AA")).throw(Error, "Unable to parse base64 string.");
+		expect(() => base64decode("AA=")).throw(Error, "Unable to parse base64 string.");
+		expect(() => base64decode("A===")).throw(Error, "Unable to parse base64 string.");
+		expect(() => base64decode("====")).throw(Error, "Unable to parse base64 string.");
+		expect(() => base64decode("A-==")).throw(Error, "Unable to parse base64 string.");
+		expect(() => base64decode("AAA-")).throw(Error, "Unable to parse base64 string.");
+		expect(() => base64decode("AAAAAA")).throw(Error, "Unable to parse base64 string.");
+		expect(() => base64decode("AAAAAA=")).throw(Error, "Unable to parse base64 string.");
+		expect(() => base64decode("AAAAA===")).throw(Error, "Unable to parse base64 string.");
+		expect(() => base64decode("AAAA====")).throw(Error, "Unable to parse base64 string.");
+		expect(() => base64decode("AAAAA-==")).throw(Error, "Unable to parse base64 string.");
+		expect(() => base64decode("AAAAAAA-")).throw(Error, "Unable to parse base64 string.");
+	});
 });
