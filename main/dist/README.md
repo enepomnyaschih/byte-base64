@@ -16,9 +16,13 @@ All other known solutions and approaches provide only a limited support for thes
 
 byte-base64 is available as [npm package](https://www.npmjs.com/package/byte-base64).
 
-    npm install byte-base64
+    npm i byte-base64
 
-Usage:
+Consumption:
+
+    import * as base64 from "byte-base64";
+
+Functions:
 
 * `bytesToBase64(bytes: number[] | Uint8Array): string` - Encodes a Uint8Array or JS array of bytes to a base64-encoded
 string.

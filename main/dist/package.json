@@ -1,8 +1,7 @@
 {
   "name": "byte-base64",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "base64 utilities for TypeScript and JavaScript",
-  "homepage": "https://github.com/enepomnyaschih/byte-base64",
   "bugs": {
     "url": "https://github.com/enepomnyaschih/byte-base64/issues"
   },
