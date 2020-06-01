@@ -22,7 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-import {base64decode, base64ToBytes} from "byte-base64";
+import {base64ToBytes} from "byte-base64";
 import {expect} from "chai";
 
 function bytes(str: string): number[] {
@@ -109,6 +109,6 @@ describe("base64ToBytes", () => {
 		expect(() => base64ToBytes("AAAAAAA-")).throw(Error, "Unable to parse base64 string.");
 
 		// https://github.com/enepomnyaschih/byte-base64/issues/2
-		expect(() => base64decode("B{==")).throw(Error, "Unable to parse base64 string.");
+		expect(() => base64ToBytes("B{==")).throw(Error, "Unable to parse base64 string.");
 	});
 });
