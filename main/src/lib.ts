@@ -71,7 +71,7 @@ const base64codes = [
 ];
 
 function getBase64Code(charCode: number) {
-	if (charCode > base64codes.length) {
+	if (charCode >= base64codes.length) {
 		throw new Error("Unable to parse base64 string.");
 	}
 	const code = base64codes[charCode];

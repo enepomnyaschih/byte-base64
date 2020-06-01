@@ -79,5 +79,8 @@ describe("base64decode", () => {
 		expect(() => base64decode("AAAA====")).throw(Error, "Unable to parse base64 string.");
 		expect(() => base64decode("AAAAA-==")).throw(Error, "Unable to parse base64 string.");
 		expect(() => base64decode("AAAAAAA-")).throw(Error, "Unable to parse base64 string.");
+
+		// https://github.com/enepomnyaschih/byte-base64/issues/2
+		expect(() => base64decode("B{==")).throw(Error, "Unable to parse base64 string.");
 	});
 });
