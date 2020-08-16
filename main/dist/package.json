@@ -1,6 +1,6 @@
 {
   "name": "byte-base64",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "base64 utilities for TypeScript and JavaScript",
   "bugs": {
     "url": "https://github.com/enepomnyaschih/byte-base64/issues"
@@ -15,5 +15,6 @@
     "url": "https://github.com/enepomnyaschih/byte-base64.git"
   },
   "main": "lib.js",
+  "module": "lib.es6.js",
   "typings": "lib.d.ts"
 }
