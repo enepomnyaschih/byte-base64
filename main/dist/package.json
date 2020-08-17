@@ -15,6 +15,7 @@
     "url": "https://github.com/enepomnyaschih/byte-base64.git"
   },
   "main": "lib.js",
+  "browser": "lib.js",
   "module": "lib.es6.js",
   "typings": "lib.d.ts"
 }
