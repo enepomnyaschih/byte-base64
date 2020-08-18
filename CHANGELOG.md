@@ -4,4 +4,4 @@
 
 # 1.1.0
 
-* Added ES6 module build target (#5, #6). 
+* Added [ES6 module build target](https://github.com/enepomnyaschih/byte-base64/issues/5).
