@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2020 Egor Nepomnyaschih
+Copyright (c) 2021 Egor Nepomnyaschih
 
 byte-base64
 base64 utilities for TypeScript and JavaScript.

@@ -1,3 +1,5 @@
+> **⚠ The project is no longer being maintained. See https://www.npmjs.com/package/base64-js as a good alternative.**
+
 ### byte-base64
 
 base64 utilities for TypeScript and JavaScript.
@@ -10,7 +12,7 @@ This library allows you to encode all the following data structures to a base64-
 [TextEncoder](https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder) and
 [TextDecoder](https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder)
 
-All other known solutions and approaches provide only a limited support for these features. In particular,
+As opposed to this implementation,
 [atob](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/atob) and
 [btoa](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/btoa) only support ASCII strings.
 
